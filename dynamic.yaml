@@ -5,10 +5,12 @@
   - credentials.yaml
   tasks:
   - name: install the postfix
+    ansible.builtin.dnf:
       name: postfix
       state: latest
 
   - name: install the gcc
+    ansible.builtin.dnf:
       name: gcc
       state: latest
 
