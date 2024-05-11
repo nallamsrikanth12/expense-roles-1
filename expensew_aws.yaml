@@ -21,7 +21,7 @@
         msg: "Output of ec2info {{ ec2_info }}"
 
    - name: Update Route 53 Hosted Zone for DB server
-    route53:
+     route53:
       state: present  # Specify the state as "present" to ensure the record exists
       zone: "srikantheswar.online"
       record: 
