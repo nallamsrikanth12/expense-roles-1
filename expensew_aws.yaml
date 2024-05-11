@@ -26,6 +26,6 @@
         zone: "srikantheswar.online"
         record: 
           name: "db.srikantheswar.online"
+          type: A
           ttl: 1   # Set TTL to 1 second if required
           value: "172.31.23.158"
-        type: A
