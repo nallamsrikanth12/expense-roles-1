@@ -31,3 +31,5 @@
           value: "{{ ec2_info.results[0].instances[0].public_ip }}"
         state: present
         
+
+        # hloo
