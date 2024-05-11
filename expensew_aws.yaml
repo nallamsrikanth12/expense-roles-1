@@ -28,8 +28,4 @@
           name: "db"
           type: A
           ttl: 300
-          value: "{{ ec2_info.results[0].instances[0].public_ip }}"
-        state: present
-        
-
-        # hloo
+          value: "54.242.155.193"
