@@ -1,0 +1,20 @@
+- name: Create EC2 instances and Update Route 53 Hosted Zones
+  hosts: localhost
+  tasks:
+    - name: Create EC2 instances
+      amazon.aws.ec2_instance:
+        instance_type: t2.micro
+        name: "{{ item | upper }}"
+        security_groups: linunserver
+        image_id: ami-090252cbe067a9e58
+        tags:
+          Name: "{{ item | upper }}"
+      loop:
+        - db
+        - backend
+        - frontend
+      register: ec2_info
+
+    - name: Print the output of ec2_info
+      ansible.builtin.debug:
+        msg: "Output of ec2info {{ ec2_info }}"
